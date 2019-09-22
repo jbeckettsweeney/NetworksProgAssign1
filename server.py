@@ -33,10 +33,12 @@ while True:
         # Receive the data in small chunks and retransmit it
         while True:
             data = connection.recv(16)
-            print(sys.stderr, 'received "%s"' % data)
+            #print(sys.stderr, 'received "%s"' % data)
             print(data)
             print(type(data))
             print("data")
+            point = int(data.decode())
+
             if data.decode() == "Test.":
                 print("success")
             if data:
